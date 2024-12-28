@@ -7,6 +7,12 @@
     <artifactId>stamping-api</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <!-- Set Java version to 17 -->
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
     <dependencies>
         <!-- JUnit 5 Dependency -->
         <dependency>
@@ -38,6 +44,17 @@
                     <dependenciesToScan>
                         <dependency>org.junit.jupiter</dependency>
                     </dependenciesToScan>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version> <!-- Use a supported version of the compiler plugin -->
+                <configuration>
+                    <source>17</source> <!-- Use Java 17 as the source version -->
+                    <target>17</target> <!-- Use Java 17 as the target version -->
                 </configuration>
             </plugin>
         </plugins>
